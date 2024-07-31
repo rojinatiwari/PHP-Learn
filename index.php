@@ -33,6 +33,11 @@
      </form>
      <br> -->
 
+     <form action="demo_request.php" method="post">
+      Name : <input type="text" name="fname">
+      <input type="text">
+     </form>
+
 
 
 
@@ -356,9 +361,26 @@
 // }
 // myfunction()
 
-$x = 200;
-echo $GLOBALS["x"];
-echo $x;
+// $x = 200;
+// echo $GLOBALS["x"];
+// echo $x;
+
+
+//server in php-> holds information about headers,paths,and script location
+
+// echo $_SERVER['PHP_SELF'];
+// echo $_SERVER['SERVER_NAME'];
+// echo $_SERVER['HTTP_HOST'];
+// echo $_SEREVER['HTTP_REFERER'];
+// echo $_SERVER['HTPP_USER_AGENT'];
+// echo $_SERVER['SCRIPT_NAME'];
+
+//REQUEST IN PHP -> contains submitted form data and all cookie data
+
+// $_REQUEST['firstname'];
+$name = $_REQUEST['fname'];
+echo $name;
+
 
 
 
