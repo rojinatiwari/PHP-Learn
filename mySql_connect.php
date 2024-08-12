@@ -44,12 +44,26 @@ if (mysqli_query($conn, $sql)) {
 //insert data
 $sql = "INSERT INTO tbl_student(firstname,lastname,email)VALUES('Rojina','Tiwari','rojina@gmail.com','Pokhara')";
 
-if(mysql_query($conn,$sql)){
+if(mysqli_query($conn,$sql)){
 echo "New record created successfully";
 }
 else
 {
 echo "Error :".$sql."<br>" . mysqli_error($conn);
+}
+
+//select data
+$sql = "SELECT id,firstname ,lastname FROM tbl_student";
+$result = mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)>0){
+    //output data of each row
+    while($row = mysqli_fetch_assoc($result)){
+        echo"id;".$row["id"]."Name:".$row["firstname"].$row["lastname"]."<br>";
+ }else
+    {
+    echo"0 results";
+}
+
 }
 
 mysqli_close($conn);
