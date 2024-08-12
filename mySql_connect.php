@@ -41,6 +41,17 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error creating table: " . mysqli_error($conn) . "<br>";
 }
+//insert data
+$sql = "INSERT INTO tbl_student(firstname,lastname,email)VALUES('Rojina','Tiwari','rojina@gmail.com','Pokhara')";
+
+if(mysql_query($conn,$sql)){
+echo "New record created successfully";
+}
+else
+{
+echo "Error :".$sql."<br>" . mysqli_error($conn);
+}
 
 mysqli_close($conn);
 ?>
+
