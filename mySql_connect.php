@@ -84,7 +84,8 @@ if($mysqli_query($conn,$sql))
     echo"Error deleting record:".mysqli_error($conn);
 
 }
-
+//insert multiple data
+$
 mysqli_close($conn);
 ?>
 
