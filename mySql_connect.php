@@ -60,10 +60,6 @@ if(mysqli_num_rows($result)>0){
     while($row = mysqli_fetch_assoc($result)){
         echo"id;".$row["id"]."Name:".$row["firstname"].$row["lastname"]."<br>";
     }
-    else
-    {
-    echo"0 results";
-}
 
 }
 //update database
@@ -85,7 +81,17 @@ if($mysqli_query($conn,$sql))
 
 }
 //insert multiple data
-$
+
+$sql="INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJINA','TIWARI','POKHARA)";
+$sql="INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROSHAN',TIWARI','POKHARA')";
+$sql="INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJAN','TIWARI','POKHARA')";
+
+if (mysqli_query($conn,$sql))
+{
+    echo"Inserted multiple data successfully";
+}else{
+    echo"error created during insertinr multiple data".mysqli_error($conn);
+}
 mysqli_close($conn);
 ?>
 
