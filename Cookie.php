@@ -27,7 +27,7 @@ setcookie($cookie_name,$cookie_value,time()+(86400*30),"/");
         echo "cookie named ".$cookie_name."is not set!";
     }else
     {
-        echo"cookie ". $cookie_name ." is set! <br>";
+        echo"cookie  name ". $cookie_name ." is set! <br>";
         echo "value is ".$_COOKIE[$cookie_name]."<br>";
     }
     
