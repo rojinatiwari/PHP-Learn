@@ -1,4 +1,6 @@
- user_info;
+ <!-- 
+  //CREATE DATABASE 
+  user_info;
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -6,7 +8,7 @@ CREATE TABLE users (
     phone VARCHAR(255) NOT NULL
     CREATE DATABASE user_info;
     nationality VARCHAR(255) NOT NULL,
-    marks VARCHAR(255) NOT NULL);
+    marks VARCHAR(255) NOT NULL); -->
 
 <?php
 session_start();
