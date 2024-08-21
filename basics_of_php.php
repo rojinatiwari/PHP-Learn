@@ -336,24 +336,24 @@ echo addNumbers(5,"5 days");
 
 //php return type declaration
 
-// declare(strict_types=1); // strict requirement
-// function addNumbers(float $a, float $b) : float {
-//   return $a + $b;
-// }
-// echo addNumbers(1.2, 5.2);
+declare(strict_types=1); // strict requirement
+function numbers(float $a, float $b) : float {
+  return $a + $b;
+}
+echo numbers(1.2, 5.2);
 
 
 //superglobals in php--> some predefined variables in php are "superglobals"
 //global
 $x = 75;
   
-function myfunction() {
+function minefunction() {
   echo $GLOBALS['x'];
 }
-myfunction();
+myfunction()
 
-$x = 200;
-echo $GLOBALS["x"];
+$s = 200;
+echo $GLOBALS["s"];
 echo $x;
 
 
