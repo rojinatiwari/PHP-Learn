@@ -2,7 +2,8 @@
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: login.html");
-    exit();}
+    exit();
+}
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,7 +12,8 @@ $dbname = "user_info";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);}
+    die("Connection failed: " . $conn->connect_error);
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -24,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         } else {
             echo "Invalid credentials.";
-        }}
+        }
     }
-    ?>
-    
+}
