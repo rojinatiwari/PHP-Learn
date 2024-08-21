@@ -1,12 +1,10 @@
 <?php
-
-
-// Create connection
 $servername = "localhost";
 $username = "root"; // Default MySQL username is usually 'root'
 $password = ""; // Default password is usually empty for 'root' on a local server
 $db_name = "db_student";
 
+// Create connection
 $conn = mysqli_connect($servername, $username, $password);
 
 // Check connection
@@ -37,9 +35,9 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error creating table: " . mysqli_error($conn) . "<br>";
 }
+
 //insert data
 $sql = "INSERT INTO tbl_student(firstname,lastname,email)VALUES('Rojina','Tiwari','rojina@gmail.com','Pokhara')";
-
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
 } else {
@@ -55,6 +53,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "id;" . $row["id"] . "Name:" . $row["firstname"] . $row["lastname"] . "<br>";
     }
 }
+
 //update database
 $sql = "UPDATE tbl_student SET lastname ='Ram' WHERE id = 2";
 if (mysqli_query($conn, $sql)) {
@@ -63,8 +62,6 @@ if (mysqli_query($conn, $sql)) {
     "Error updating record :" . mysqli_error($conn);
 }
 
-
-
 //delete database
 $sql = "DELETE FROM tbl_student WHERE id=3 ";
 if ($mysqli_query($conn, $sql)) {
@@ -72,15 +69,17 @@ if ($mysqli_query($conn, $sql)) {
 } else {
     echo "Error deleting record:" . mysqli_error($conn);
 }
+
 //insert multiple data
-
-$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJINA','TIWARI','POKHARA)";
-$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROSHAN',TIWARI','POKHARA')";
-$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJAN','TIWARI','POKHARA')";
-
+$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJINA','TIWARI','rojina@gmail.com','POKHARA')";
+$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROSHAN',TIWARI','roshan2@gmail.com','POKHARA')";
+$sql = "INSERT INTO tbl_student (firstName,lastName,email,address)VALUES('ROJAN','TIWARI','rojan@3gmail.com''POKHARA')";
 if (mysqli_query($conn, $sql)) {
     echo "Inserted multiple data successfully";
 } else {
     echo "error created during insertinr multiple data" . mysqli_error($conn);
 }
+
 mysqli_close($conn);
+
+?>
