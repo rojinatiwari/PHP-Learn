@@ -352,7 +352,7 @@ function minefunction() {
 }
 myfunction()
 
-$s = 200;
+$w= 200;
 echo $GLOBALS["s"];
 echo $x;
 
@@ -371,4 +371,10 @@ echo $_SERVER['SCRIPT_NAME'];
 $_REQUEST['firstname'];
 $name = $_REQUEST['fname'];
 echo $name;
+
+
+//$_POST contains an array of variables received via the HTTP POST method
+$name = $_POST['fname'];
+echo $name;
+
 ?>

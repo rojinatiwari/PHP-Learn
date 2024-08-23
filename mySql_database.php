@@ -14,6 +14,7 @@ if (!$conn) {
 echo "Connected successfully<br>";
 
 // Create database
+$db_name = "db_student";
 $sql = "CREATE DATABASE db_student";
 if (mysqli_query($conn, $sql)) {
     echo "Database created successfully<br>";
